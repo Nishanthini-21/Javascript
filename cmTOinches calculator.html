@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: blanchedalmond;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+
+        }
+        div{
+            width:600px;
+            height:400px;
+            background-color: rgb(73, 71, 71);
+            border-radius: 7px;
+            display:flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            
+        }
+        #input{
+            border:2px solid black;
+            border-radius: 3px;
+        }
+        #h2,#input,#result,#btn{
+            padding:10px;
+            margin:20px;
+        }
+
+        #btn{
+            background-color: rgb(236, 200, 74);
+            border-radius: 5px;
+            font-size: large;
+            border:1px solid black;
+        }
+        #result{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="maincont">
+        <h2 id="h2">Cm to inches</h2>
+        <input id="input" type="text">
+        <button id="btn">Calculate</button>
+        <h3 id="result"></h3>
+
+    </div>
+    <script>
+        let input=document.getElementById("input")
+        let btn=document.getElementById("btn")
+        let result=document.getElementById("result")
+        btn.addEventListener("click",function(){
+            let cm=Number(input.value)
+            let inches=Number(cm/2.54)
+            result.textContent=inches.toFixed(3)+" inches"
+        })
+    </script>
+</body>
+</html>
