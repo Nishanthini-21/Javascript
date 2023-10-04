@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=PT+Serif&family=Poppins&family=Rubik&display=swap');
+
+/**
+*! universal styling
+**/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+i{
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+/**
+*! navbar styling
+**/
+
+.navbar{
+    background-color: #212529;
+    color:white;
+    padding:25px 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.navbar h2{
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-size: 25px;
+}
+.cart{
+    font-size: 25px;
+    background-color: white;
+    color: #212529;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+.cartqty{
+    font-size: 20px;
+    background-color: orangered;
+    color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    padding: 3px;
+}
+
+/**
+*! stylings products
+**/
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(4,223px);
+    gap: 35px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width:1000px){ 
+    .products{
+        grid-template-columns: repeat(2,223px);
+    }
+}
+
+@media (max-width:500px){ 
+    .products{
+        grid-template-columns: repeat(1,223px);
+    }
+}
+
+.item{
+    border-radius: 5px;
+    border: 2px solid #212529;
+    /* transition: transform 0.5s; */
+}
+
+.item img{
+    width:100%;
+    border-radius:2px 2px 0 0 ;
+}
+
+/* .item:hover{
+    transform: scale(1.05);
+} */
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.price-qty{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons{
+    display: flex;
+    gap: 8px; 
+    font-size: 18px;  
+}
+.bi-dash-lg{
+    color:orangered
+}
+.bi-plus-lg{
+    color:rgb(1, 110, 1)
+}
+
+/**
+*! targeting the style for cart buttons and label
+**/
+
+.text-center{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-home{
+    border-radius: 4px;
+    padding: 10px;
+    border-style: none;
+    margin-top: 12px;
+    background-color: #212529;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.bi-x-lg{
+    color:orangered;
+    font-weight: bold;
+}
+
+/**
+*! styling shoppingcart
+**/
+
+.shoppingcart{
+    display: grid;
+    grid-template-columns: repeat(1,320px);
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.details,.tot{
+    margin-top: 6px;
+    margin-left: 2px;
+}
+.cart-item{
+    border: 2px solid #212529;
+    border-radius: 5px;
+    display: flex;
+}
+.name-price-x{
+    width: 210px;
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: space-between;
+}
+.title-price{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cart-price{
+    background-color: #212529;
+    color: white;
+    border-radius: 2px;
+    padding: 3px 6px;
+}
+.cart-buttons{
+    margin-top: 8px;
+    font-size: medium;
+}
+.checkout{
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    padding: 8px;
+    border-style: none;
+    border: 1px solid #212529;
+}
+
+.clearcart{
+    border-style: none;
+    border-radius: 5px;
+    background-color:red;
+    color: white;
+    padding: 8px;
+    border: 1px solid #212529;
+}
